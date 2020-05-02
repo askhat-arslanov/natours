@@ -44,12 +44,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
+  margin-bottom: 60px;
+  
   /* Fix shaking animated element */
   backface-visibility: hidden;
 
@@ -67,6 +69,34 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
     animation: moveInRight 0.7s ease-out;
+  }
+}
+
+.btn {
+  transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+  }
+  
+  &--white {
+    color: #777;
+    background-color: #fff;
+    border-radius: 42px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
   }
 }
 
