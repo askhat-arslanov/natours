@@ -22,7 +22,7 @@ body {
     animation: moveInLeft 0.7s ease-out;
   }
 
-  &--secondary {
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -32,5 +32,49 @@ body {
     &::selection {
       background-color: rgb(79, 223, 127);
     }
+  }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  /*
+    Градиент для текста:
+     - задаем градиент
+     - обрезаем его по тексту
+     - делаем текст прозрачным, чтобы был виден градиент
+  */
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  letter-spacing: 2px;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
