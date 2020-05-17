@@ -4,6 +4,7 @@
   transition: all 0.2s;
   font-size: 1.6rem;
 
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -11,6 +12,8 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 5rem;
+    border: none;
+    cursor: pointer;
   }
 
   &--animated {
@@ -59,7 +62,9 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
